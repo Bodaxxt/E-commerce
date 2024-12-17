@@ -1,0 +1,693 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan' , sans-serif;
+    
+}
+body{
+    width: 100%;
+}
+
+/*Header***/
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #e3e6f3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+
+}
+#nav li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#nav li a:hover,
+#nav li a.active{
+    color: #09bcf3;
+    
+}
+
+#nav li a.active::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #09bcf3;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/*Home page*/
+
+#hero{
+    background-image: url("hero4.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+    font-size: 40px;
+}
+#hero p{
+    padding-bottom: 15px;
+    
+}
+#hero h1{
+    padding-bottom: 15px;
+    color: #09e099;
+    font-size: 80px;
+}
+#hero h2{
+    font-size: 80px;
+}
+#hero button{
+   
+    color: #000000;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 11px rgba(0, 0, 0, 0.2);
+}
+
+#hero button:hover{
+    background-color: #000000;
+    color: #ffffff;
+
+}
+
+/*--------------------------------------------------------*/
+.services {
+    display: flex;
+    justify-content: space-between; /* توزيع العناصر بالتساوي */
+    flex-wrap: nowrap; /* منع الالتفاف */
+    padding: 20px;
+    gap: 15px; /* مسافة بين العناصر */
+    background-color: #fff;
+    overflow-x: auto; /* لإضافة شريط تمرير إذا لم تتسع العناصر */
+}
+
+.service {
+    flex: 0 0 calc(16.66% - 15px); /* حجم العنصر بما يتناسب مع 6 عناصر في صف واحد */
+    text-align: center;
+    border: 2px solid #ddd; 
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column; /* ترتيب الصورة والنص رأسيًا */
+    align-items: center; /* محاذاة العناصر في المنتصف */
+    justify-content: space-between; /* توزيع العناصر عمودياً */
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service img {
+    width: 80%; /* عرض الصورة داخل العنصر */
+    height: auto; /* الحفاظ على تناسب الصورة */
+    margin-bottom: 15px; /* مسافة بين الصورة والباقي */
+    border-radius: 5px;
+}
+
+.service .text-box {
+    width: 100%; /* عرض النص كاملاً داخل البوكس */
+    padding: 10px; /* مسافة داخلية للنص */
+    background-color: #e5e6f1; /* لون خلفية البوكس الخاص بالنص */
+    border-radius: 8px; /* جعل الزوايا مستديرة */
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* ظل خفيف للنص */
+    margin-top: auto; /* دفع النص إلى الأسفل */
+    cursor: pointer;
+}
+
+
+/*-------*/
+.featured-products {
+    text-align: center;
+    margin: 40px 20px;
+    border: #000000;
+}
+
+.featured-products h1 {
+    font-size: 80px;
+    color: #333;
+}
+
+.featured-products p {
+    font-size: 25px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+
+.product-container {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 70px; 
+    padding: 20px;
+}
+
+
+/** تاني اربعه **/
+:root {
+    --box-width: 400px;
+    --image-size: 350px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: var(--box-width); 
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border: 1px solid black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover{
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.623);
+}
+
+.product-card img {
+    width: var(--image-size); 
+    height: var(--image-size);
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+
+.product-info h3 {
+    font-size: 20px;
+    color: #aaa;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.product-info p {
+    font-size: 30px;
+    color: #333;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.rating {
+    color: #f5a623;
+    font-size: 14px;
+}
+
+.price {
+    color: #28a745;
+    font-size: 20px;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.cart-button {
+    background: #06d4a4;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.cart-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/*---------------------------------*/
+.rel {
+    position: relative;
+    background: url('b2.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rel .content2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.rel h4 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.rel h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.rel .btn {
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    color: #28816b;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 11px rgba(0, 0, 0, 0.2);
+}
+
+.rel .btn:hover {
+    background-color: #FFA500;
+    color: #ffffff;
+}
+
+/*--------------*/
+
+
+/* تخطيط الشبكة */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* عمودين */
+    gap: 30px; /* مسافة بين العناصر */
+    justify-content: center;
+    padding: 20px;
+}
+
+/* إعداد المربعات */
+.item {
+    position: relative;
+    text-align: center;
+    border-radius: 00px;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* إعداد الشبكة */
+.container {
+    display: flex; /* تخطيط المربعات بجانب بعض */
+    gap: 3; /* مسافة بين المربعات */
+}
+
+/* المربعات */
+.item {
+    position: relative;
+    width: 600px; /* عرض المربع */
+    height: 400px; /* ارتفاع المربع */
+    border-radius: 00px;
+    overflow: hidden;
+    background-color: #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لضبط الصورة داخل المربع */
+}
+
+/* النصوص داخل المربعات */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* محاذاة النص لليمين */
+    transform: translateY(-50%);
+    text-align: left; /* جعل النصوص بمحاذاة اليمين */
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#orange-text {
+    color: rgb(255, 255, 255); /* لون النصوص في المربع البرتقالي */
+
+}
+
+#green-text {
+    color: white; /* لون النصوص في المربع الأخضر */
+}
+
+/* النصوص */
+.content h2 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    margin-bottom: -15px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.content p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* قاعدة عامة للأزرار */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+/* الزر الأول */
+.orange-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    
+}
+
+.orange-btn:hover {
+    background-color: #e68900;
+}
+
+/* الزر الثاني */
+.green-btn {
+    background-color: #08660d;
+    color: white;
+}
+
+.green-btn:hover {
+    background-color: #3e8e41;
+}
+
+
+/* إعداد الشبكة للمربعات الثلاثة السفلية */
+.container3 {
+    display: flex; /* تخطيط المربعات بجانب بعض */
+    gap: 20px; /* مسافة بين المربعات */
+    justify-content: center; /* محاذاة المربعات للوسط */
+    padding: 10px;
+}
+
+/* المربعات السفلية */
+.item2 {
+    position: relative;
+    width: 395px; /* نفس العرض مثل المربعات العليا */
+    height: 300px; /* نفس الارتفاع مثل المربعات العليا */
+    border-radius: 0px;
+    overflow: hidden;
+    background-color: #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لضبط الصورة داخل المربع */
+}
+
+/* النصوص داخل المربعات السفلية */
+.content2 {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* محاذاة النص لليمين */
+    transform: translateY(-50%);
+    text-align: left; /* جعل النصوص بمحاذاة اليمين */
+    font-family: 'Arial', sans-serif; /* يمكن تخصيص الخط هنا إذا أردت */
+    color: white;
+}
+
+.textbrown,
+.textwhite,
+.textblue {
+    display: flex;
+    gap: 10px; /* المسافة بين الكلمات */
+    align-items: center; /* محاذاة الكلمات في المنتصف */
+}
+/* المربع البني */
+.brown2 {
+    color: white; /* لون النصوص داخل المربع البني */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* خط النص */
+    font-weight: normal; /* سمك الخط */
+    font-size: 1.2rem; /* حجم الخط */
+}
+
+/* المربع الأبيض */
+.white2 {
+    color: rgb(255, 255, 255); /* لون النصوص داخل المربع الأبيض */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* خط النص */
+    font-weight:normal; /* سمك الخط */
+    font-size: 1.1rem; /* حجم الخط */
+}
+
+/* المربع الأزرق */
+.blue2 {
+    color: white; /* لون النصوص داخل المربع الأزرق */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* خط النص */
+    font-weight: normal; /* سمك الخط */
+    font-size: 50px; /* حجم الخط */
+
+}
+
+/* النصوص داخل المربعات الصغيرة */
+.content2 h2 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 30px;
+
+}
+
+.content2 p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: brown;
+    display: flex;
+}
+
+/* إعداد القسم العام */
+.newsletter-section {
+    padding: 40px 0;
+    background: url("b14.png") no-repeat center center/cover;
+    background-position: 20% 30%;
+    background-color: #041e42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 20vh;
+}
+
+/* إعداد الحاوية */
+.newsletter-container {
+    text-align: center;
+    color: white;
+    width: 100%;
+    
+    max-width: 600px;
+}
+
+/* إعداد العنوان */
+.title {
+    font-size: 2.2rem;
+   margin-bottom: 80px;
+    position: absolute;
+    left: 70px;
+    top: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* إعداد النص الصغير */
+.description {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    color: #c5c5c5;
+    position: absolute;
+    left: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.span{
+    color: goldenrod;
+}
+/* إعداد حقل الإدخال */
+
+#sign{
+    background-color:#041e42;
+    background-image: url(banner/b14.png);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    padding: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.signbox{
+    font-size: 20px;
+    color: #fff;
+}
+.signbox h3{
+    margin-bottom: 8px;
+}
+.signbox p span{
+    color:#ffbd27;
+}
+.c{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.s{
+    background-color: #008178;
+    color: #fff;
+   white-space: nowrap;
+   padding: 9px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   border-top-left-radius: 0;
+   border-bottom-left-radius: 0;
+ 
+
+  
+}
+.form{
+    display: flex;
+    width: 40%;}
+/* تأثير الزر عند التمرير فوقه */
+.signup-btn:hover {
+    background-color: #1f6476;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px 80px;
+}
+footer .col{ 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo{
+    margin-bottom: 30px;
+}
+footer h4{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 16px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .install .row img{
+    border:  1px solid black;
+    border-radius: 6px;
+}
+
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #06d4a4;
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+}
